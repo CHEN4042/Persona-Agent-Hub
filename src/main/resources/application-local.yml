@@ -2,17 +2,16 @@ spring:
   application:
     name: LibraryReservationReviewHub
   ai:
-    openai:
-      api-key: ${DASHSCOPE_API_KEY}
+    dashscope:
+      api-key: sk-7460f782ac83459da6b4c7eb4fe28cdd
       base-url: https://dashscope.aliyuncs.com/compatible-mode
       chat:
         options:
           model: qwen-max
 
-
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/library_reservation_review_hub
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/library_reservation_review_hub
     username: ${DB_USERNAME}
     password: ${DB_PASSWORD}
 
