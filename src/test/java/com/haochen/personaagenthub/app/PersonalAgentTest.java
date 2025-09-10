@@ -30,4 +30,21 @@ class PersonalAgentTest {
         answer = personalAgent.doChat(message3,chatId);
         Assertions.assertNotNull(answer);
     }
+
+    @Test
+    void doChat() {
+    }
+
+    @Test
+    void doChatByStream() {
+    }
+
+    @Test
+    void doChatWithReport() {
+        String chatId = UUID.randomUUID().toString();
+        // 第一轮
+        String message1 = "你好，我是程序员陈某, 能讲一下红黑树吗";
+        String answer = personalAgent.doChat(message1,chatId);
+        Assertions.assertNotNull(answer);
+    }
 }
